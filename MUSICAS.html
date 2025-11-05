@@ -1,0 +1,287 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Músicas Românticas Inesquecíveis</title>
+  <style>
+    /* ======== RESET ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f3347a, #ee76b27e, #e65a94);
+      color: #a59f9f;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeaa7;
+    }
+
+    /* ======== HERO ======== */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      background: url('https://i.pinimg.com/736x/48/b9/f9/48b9f9fdf57f44de36e8026f1a073608.jpg') center/cover no-repeat;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 3rem;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero p {
+      position: relative;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      z-index: 2;
+      color: #f1f1f1;
+    }
+
+    .btn {
+      position: relative;
+      margin-top: 2rem;
+      padding: 12px 30px;
+      background: #ff7675;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 2;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d6306d;
+    }
+
+    /* ======== SEÇÕES ======== */
+    section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    section h3 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #2d3436;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+      margin: 10px;
+      gap: 40px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+
+
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #d16792;
+    }
+
+    .card-content p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+   
+    /* ======== BOTÃO SCROLL ======== */
+    #scrollTop {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #f9a2a2;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+      cursor: pointer;
+      display: none;
+      transition: 0.3s;
+    }
+
+    #scrollTop:hover {
+      background: #ff7675;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>𝑴𝒖́𝒔𝒊𝒄𝒂𝒔</h1>
+    <nav>
+      <a href="#romanticos">Internacionais</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Deixe o amor tocar — músicas que marcam momentos</h2>
+    <p>Descubra trilhas sonoras perfeitas pra cada tipo de casal e vibe.</p>
+    <button class="btn" onclick="scrollToSection('romanticos')">Explorar músicas</button>
+  </section>
+
+  <!-- INTERNACIONAIS -->
+  <section id="𝑹𝒐𝒎𝒂̂𝒏𝒕𝒊𝒄𝒐𝒔s">
+    <h3>Músicas Internacionais</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/61/04/7b/61047b9a39aca07981d9e5278c2be548.jpg" alt="Foto capa música The Weeknd e Ariana Grande">
+        <div class="card-content">
+          <h4>“Die For You (Remix)” — The Weeknd ft. Ariana Grande</h4>
+          <p>Uma vibe intensa e apaixonada — perfeita pra casais que se completam em cada batida.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/57/a1/31/57a13183d60c75dd5cd6121110189245.jpg" alt="">
+        <div class="card-content">
+          <h4>“Intentions” — Justin Bieber ft. Quavo</h4>
+          <p>Energia leve, amor genuíno e gratidão — pra quem ama de forma simples e real.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/7a/c1/56/7ac156347b72590e4a2467fbbf2099f8.jpg" alt="">
+        <div class="card-content">
+          <h4>“Adore You” — Harry Styles</h4>
+          <p>Um hino de amor calmo e sincero — pra trilhar momentos de carinho e afeto.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/88/85/d4/8885d414fbf0eb971902070bdfa7638a.jpg" alt="">
+        <div class="card-content">
+          <h4>"Best Part” - Daniel Caesar ft. H.E.R.</h4>
+          <p>Calma e doce, é uma declaração pura de amor. Daniel e H.E.R. falam sobre como a pessoa amada é o motivo de
+            tudo ficar melhor.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/5f/7f/c6/5f7fc628b4264c5da21aa6af85d750ad.jpg" alt="">
+        <div class="card-content">
+          <h4> “Come Through” - H.E.R. ft. Chris Brown</h4>
+          <p>Leve e cheia de química, essa faixa mostra a conexão entre dois amantes que só querem curtir o momento
+            juntos. Um R&B moderno e romântico.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.pinimg.com/1200x/ea/5b/91/ea5b9129c9be13e2916421c298914d7b.jpg" alt="">
+        <div class="card-content">
+          <h4>"Back to Sleep" - Chris Brown</h4>
+          <p>Romântica e provocante, essa música é sobre o desejo de ficar juntinho e aproveitar o momento. A voz suave
+            do Chris deixa tudo ainda mais apaixonante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- SCROLL BUTTON -->
+  <button id="scrollTop" onclick="scrollToTop()">↑</button>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const btn = document.getElementById('scrollTop');
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 300) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+
+</html>

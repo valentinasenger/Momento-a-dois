@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+
+        }
+
+        body {
+            background: linear-gradient(135deg, #fce4ec, #ffe6f0, #fff0f5);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #e6439c;
+            font-family: 'Poppins', serif;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #e29bc2;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c24a7e;
+        }
+
+        .btn-menu-header {
+            padding: 8px 18px;
+            background: #f73e8e;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-menu-header:hover {
+            background: #ec3a6a;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            background: url('https://i.pinimg.com/1200x/ac/e2/c2/ace2c27ee187955db6d95063237622fc.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero h2 {
+            position: relative;
+            font-size: 3rem;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero p {
+            position: relative;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            z-index: 2;
+            color: #f1f1f1;
+            max-width: 700px;
+        }
+
+        .btn {
+            position: relative;
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background: #d1417f;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffeaa7;
+        }
+
+        /* CARDS SECTION */
+        section.cards-section {
+            padding: 80px 10%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            filter: drop-shadow(0 5px 10px rgba(183, 106, 148, 0.6));
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h4 {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #f35aae;
+        }
+
+        .card-content p {
+            color: #5a3b4f;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        @media (max-width: 1200px) {
+            section.cards-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            section.cards-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>𝑷𝒓𝒆𝒔𝒆𝒏𝒕𝒆𝒔</h1>
+        <nav>
+            <a href="#joias">Jóias</a>
+            <a href="#Presentes feitos à mão">Presentes feitos à mão</a>
+            <a href="#Flores">Flores</a>
+            <a href="#Aliança">Aliança</a>
+            <a href="#Roupas">Roupas</a>
+            <a href="#Perfume">Perfume</a>
+            <a href="#Maquiagem">Maquiagem</a>
+            <a href="#Chocolates">Chocolates</a>
+        </nav>
+        <a href="SITE.html" class="btn-menu-header">Voltar ao Menu</a>
+    </header>
+
+    <section class="hero">
+        <h2>Ideias de Presentes para dar ao Seu Amor</h2>
+        <p>Dar presentes é uma forma agrádavel de demonstrar seu amor à pessoa!</p>
+        <button class="btn" onclick="document.getElementById('brownie').scrollIntoView({behavior:'smooth'});">Explorar
+            Presentes</button>
+    </section>
+
+    <section class="cards-section">
+        <div class="card" id="joias">
+            <img src="https://i.pinimg.com/1200x/69/99/14/699914fb936d7cdaf19b0f73504a018b.jpg" alt="Jóias">
+            <div class="card-content">
+                <h4>𝑱𝒐́𝒊𝒂𝒔</h4>
+                <p>podem ser categorizados por seu material (ouro, prata e pedras preciosas), por finalidade (anéis,
+                    colares e brincos) ou por sua qualidade (semijoias e bijuterias). </p>
+            </div>
+        </div>
+        <div class="card" id="mao">
+            <img src="https://i.pinimg.com/1200x/e2/aa/06/e2aa06d89ccd67d13b4f5f8e191d5410.jpg"
+                alt="Presentes feitos à mão">
+            <div class="card-content">
+                <h4>𝑷𝒓𝒆𝒔𝒆𝒏𝒕𝒆𝒔 𝒇𝒆𝒊𝒕𝒐𝒔 𝒂̀ 𝒎𝒂̃𝒐</h4>
+                <p>decoração (porta-retratos, vasos), utilidades (jogos americanos, cachecóis, velas), personalizados
+                    (álbuns de fotos, cadernos, camisetas), kits (culinário, autocuidado).</p>
+            </div>
+        </div>
+        <div class="card" id="flores">
+            <img src="https://i.pinimg.com/736x/04/8b/2e/048b2ea80faf2f4f4cbcf9f87032ce18.jpg" alt="Flores">
+            <div class="card-content">
+                <h4>𝑭𝒍𝒐𝒓𝒆𝒔</h4>
+                <p>podem ser classificadas de diversas formas, mas entre as mais populares estão rosas, orquídeas,
+                    girassóis, margaridas, tulipas e lírios.</p>
+            </div>
+        </div>
+
+        <div class="card" id="alianca">
+            <img src="https://i.pinimg.com/1200x/51/ed/09/51ed0949c813fcf65815f9ca1817d283.jpg" alt="Aliança">
+            <div class="card-content">
+                <h4>𝑨𝒍𝒊𝒂𝒏𝒄̧𝒂</h4>
+                <p>Existem diversos tipos de alianças, que variam conforme o material, a ocasião e o design. A escolha
+                    depende do orçamento, do estilo do casal e do nível de durabilidade desejado.</p>
+            </div>
+        </div>
+
+        <div class="card" id="roupas">
+            <img src="https://i.pinimg.com/736x/26/d4/bd/26d4bd00378074786b60f91c0f5a57f3.jpg" alt="Roupas">
+            <div class="card-content">
+                <h4>𝑹𝒐𝒖𝒑𝒂𝒔</h4>
+                <p>Existem diferentes formas de classificar as roupas femininas, seja por estilo, ocasião ou tipo de
+                    peça.</p>
+            </div>
+        </div>
+
+        <div class="card" id="perfume">
+            <img src="https://i.pinimg.com/736x/80/76/5f/80765f0f50b906794a9ea3b3cf7d4303.jpg" alt="Perfume">
+            <div class="card-content">
+                <h4>𝑷𝒆𝒓𝒇𝒖𝒎𝒆</h4>
+                <p>variam de acordo com as famílias olfativas, a concentração de essências e a ocasião de uso. As
+                    famílias olfativas, como floral, amadeirada, frutal e cítrica, definem o aroma predominante.</p>
+            </div>
+        </div>
+
+        <div class="card" id="maquiagem">
+            <img src="https://i.pinimg.com/1200x/9e/97/b1/9e97b10b08852b19a74e630d28c5fd2d.jpg" alt="Maquiagem">
+            <div class="card-content">
+                <h4>𝑴𝒂𝒒𝒖𝒊𝒂𝒈𝒆𝒎</h4>
+                <p>Tipos de maquiagem incluem a natural/express (para o dia a dia), a social/clássica (para ocasiões
+                    especiais) e a artística (criativa e de efeitos especiais). </p>
+            </div>
+        </div>
+
+        <div class="card" id="chocolate">
+            <img src="https://i.pinimg.com/736x/f7/ec/90/f7ec906ac9673a06cb49b9870041fd63.jpg" alt="Chocolate">
+            <div class="card-content">
+                <h4>𝑪𝒉𝒐𝒄𝒐𝒍𝒂𝒕𝒆</h4>
+                <p>Os principais tipos de chocolate são o amargo, ao leite e branco, que se diferenciam principalmente
+                    pela quantidade de cacau e ingredientes como açúcar e leite. </p>
+            </div>
+        </div>
+    </section>
+    <audio id="bgmusic" autoplay loop playsinline>
+        <source src="Aliança - Tribalistas (clipe oficial) [moINq-uxPtY].mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+
+</html>

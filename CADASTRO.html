@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<title>Login e Cadastro</title>
+
+<style>
+    body{
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(200deg, #f6a0d7, #ffb6c1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Raleway", sans-serif;
+        color: #ff4b93;
+    }
+
+    main.faq{
+        background: #ffe6f0;
+        padding: 22px;
+        border-radius: 14px;
+        max-width: 560px;
+        width: 92%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .botaoInicial{
+        width: 140px;
+        border: none;
+        background-color: #ff8cb2; /* rosa claro */
+        color: white;
+        padding: 10px 12px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 20px;
+        margin: 8px auto;
+        display: block;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .botaoInicial:hover{
+        background-color: #ff6ca3; /* hover mais forte */
+    }
+
+    .resposta{
+        display: none;
+        margin-top: 20px;
+    }
+
+    input{
+        width: 92%;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ff9cc1;
+        font-size: 14px;
+    }
+
+    .botaoEnviar, .btnMenu{
+        background-color: #ff8cb2; /* rosa claro */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+    .botaoEnviar:hover, .btnMenu:hover{
+        background-color: #ff6ca3;
+    }
+
+    .btnMenu{
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    p{
+        font-weight: bold;
+        color: #d64b8b;
+    }
+</style>
+
+</head>
+<body>
+
+<main class="faq">
+    <h2>Escolha uma opção:</h2>
+
+    <!-- Botões iniciais -->
+    <button class="botaoInicial" id="btnCadastrar" onclick="mostrarCadastro()">Cadastrar</button>
+    <button class="botaoInicial" id="btnEntrar" onclick="mostrarLogin()">Entrar</button>
+
+    <!-- CADASTRAR -->
+    <div class="resposta" id="cadastro">
+        <h3>Cadastro</h3>
+        <input type="text" placeholder="Nome completo" id="nomeCadastro">
+        <input type="email" placeholder="Email" id="emailCadastro">
+        <input type="text" placeholder="Telefone" id="telefoneCadastro">
+        <input type="text" placeholder="CPF" id="cpfCadastro">
+        <input type="text" placeholder="CEP" id="cepCadastro">
+        <button class="botaoEnviar" onclick="concluirCadastro()">Concluir cadastro</button>
+        <p id="msgCadastro"></p>
+    </div>
+
+    <!-- entrar -->
+    <div class="resposta" id="login">
+        <h3>Entrar</h3>
+        <input type="email" placeholder="Seu email" id="emailLogin">
+        <input type="password" placeholder="Sua senha" id="senhaLogin">
+        <button class="botaoEnviar" onclick="permitirLogin()">Entrar</button>
+        <p id="msgLogin"></p>
+    </div>
+
+    <!-- voltar menu -->
+    <a href="SITE.html">
+        <button class="btnMenu">Voltar ao menu</button>
+    </a>
+</main>
+
+<script>
+function mostrarCadastro(){
+    document.getElementById("cadastro").style.display = "block";
+    document.getElementById("login").style.display = "none";
+    document.getElementById("btnCadastrar").style.display = "none";
+    document.getElementById("btnEntrar").style.display = "none";
+}
+
+function mostrarLogin(){
+    document.getElementById("cadastro").style.display = "none";
+    document.getElementById("login").style.display = "block";
+    document.getElementById("btnCadastrar").style.display = "none";
+    document.getElementById("btnEntrar").style.display = "none";
+}
+
+function concluirCadastro(){
+    const nome = document.getElementById("nomeCadastro").value.trim();
+    const email = document.getElementById("emailCadastro").value.trim();
+    const telefone = document.getElementById("telefoneCadastro").value.trim();
+    const cpf = document.getElementById("cpfCadastro").value.trim();
+    const cep = document.getElementById("cepCadastro").value.trim();
+
+    if(!nome || !email || !telefone || !cpf || !cep){
+        document.getElementById("msgCadastro").innerText = "Por favor, preencha todos os campos!";
+    } else {
+        document.getElementById("msgCadastro").innerText = "Cadastro concluído!";
+    }
+}
+
+function permitirLogin(){
+    const email = document.getElementById("emailLogin").value.trim();
+    const senha = document.getElementById("senhaLogin").value.trim();
+
+    if(!email || !senha){
+        document.getElementById("msgLogin").innerText = "Por favor, preencha todos os campos!";
+    } else {
+        document.getElementById("msgLogin").innerText = "Login permitido!";
+    }
+}
+</script>
+
+</body>
+</html>

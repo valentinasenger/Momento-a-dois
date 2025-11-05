@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas a Dois</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Raleway", sans-serif;
+
+        }
+
+        body {
+            background: linear-gradient(135deg, #fce4ec, #ffe6f0, #fff0f5);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #b76a94;
+            font-family: 'Times New Roman', serif;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #b76a94;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff90c1;
+        }
+
+        .btn-menu-header {
+            padding: 8px 18px;
+            background: #ff90c1;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-menu-header:hover {
+            background: #ff5784;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            background: url('https://i.pinimg.com/1200x/ca/ac/e3/caace3c9518b4a83f880332f78aaf40a.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero h2 {
+            position: relative;
+            font-size: 3rem;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero p {
+            position: relative;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            z-index: 2;
+            color: #f1f1f1;
+            max-width: 700px;
+        }
+
+        .btn {
+            position: relative;
+            margin-top: 2rem;
+            padding: 12px 30px;
+            background: #b079a7;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffeaa7;
+        }
+
+        /* CARDS SECTION */
+        section.cards-section {
+            padding: 80px 10%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            filter: drop-shadow(0 5px 10px rgba(183, 106, 148, 0.6));
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h4 {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #b76a94;
+        }
+
+        .card-content p {
+            color: #5a3b4f;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        @media (max-width: 1200px) {
+            section.cards-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            section.cards-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>𝑹𝒆𝒄𝒆𝒊𝒕𝒂𝒔 𝒂 𝑫𝒐𝒊𝒔</h1>
+        <nav>
+            <a href="#brownie">Brownie</a>
+            <a href="#macarrao">Macarrão</a>
+            <a href="#brigadeiro">Brigadeiro</a>
+            <a href="#torta">Torta</a>
+            <a href="#bolo">Bolo</a>
+            <a href="#cookie">Cookie</a>
+            <a href="#pizza">Pizza</a>
+            <a href="#salada">Salada</a>
+        </nav>
+        <a href="SITE.html" class="btn-menu-header">Voltar ao Menu</a>
+    </header>
+
+    <section class="hero">
+        <h2>Ideias de Receitas Românticas para Fazer com Seu Amor</h2>
+        <p>Cozinhar juntos é uma forma deliciosa de passar tempo de qualidade e criar memórias inesquecíveis!</p>
+        <button class="btn" onclick="document.getElementById('brownie').scrollIntoView({behavior:'smooth'});">Explorar
+            Receitas</button>
+    </section>
+
+    <section class="cards-section">
+        <div class="card" id="brownie">
+            <img src="https://i.pinimg.com/1200x/6c/b3/2e/6cb32eec5ac87669bdad4f11220083f4.jpg" alt="Brownie">
+            <div class="card-content">
+                <h4>𝑩𝒓𝒐𝒘𝒏𝒊𝒆</h4>
+                <p>200g chocolate, 150g manteiga, 3 ovos, 1 xícara açúcar, 1/2 xícara farinha. Derreta chocolate e
+                    manteiga, misture ovos e açúcar, adicione chocolate e farinha, asse 25-30 min a 180°C.</p>
+            </div>
+        </div>
+
+        <div class="card" id="macarrao">
+            <img src="https://i.pinimg.com/1200x/1f/8d/55/1f8d551e116f5d1bac1caddcfe7b2904.jpg" alt="Macarrão">
+            <div class="card-content">
+                <h4>𝑴𝒂𝒄𝒂𝒓𝒓𝒂̃𝒐</h4>
+                <p>200g massa, molho de tomate fresco, manjericão, azeite e queijo. Cozinhe a massa, prepare molho,
+                    misture e sirva decorando com manjericão e queijo ralado.</p>
+            </div>
+        </div>
+
+        <div class="card" id="brigadeiro">
+            <img src="https://i.pinimg.com/1200x/81/1b/39/811b39599d35e4b3195e031e1b9ef382.jpg" alt="Brigadeiro">
+            <div class="card-content">
+                <h4>𝑩𝒓𝒊𝒈𝒂𝒅𝒆𝒊𝒓𝒐</h4>
+                <p>1 lata leite condensado, 2 colheres chocolate em pó, 1 colher manteiga. Cozinhe até engrossar, deixe
+                    esfriar e enrole, passando no granulado.</p>
+            </div>
+        </div>
+
+        <div class="card" id="torta">
+            <img src="https://i.pinimg.com/1200x/28/25/a3/2825a3c1812ddf2c7f276f1978bceac2.jpg" alt="Torta">
+            <div class="card-content">
+                <h4>𝑻𝒐𝒓𝒕𝒂</h4>
+                <p>Massa pronta, recheio de frutas, creme de confeiteiro. Monte camadas, decore e leve à geladeira antes
+                    de servir.</p>
+            </div>
+        </div>
+
+        <div class="card" id="bolo">
+            <img src="https://i.pinimg.com/736x/ab/b3/05/abb305a2cc1969604d51a66588a8bf9f.jpg" alt="Bolo">
+            <div class="card-content">
+                <h4>𝑩𝒐𝒍𝒐</h4>
+                <p>2 xícaras farinha, 2 ovos, 1 xícara açúcar, 1/2 xícara manteiga, 1 xícara leite. Misture, asse 30-35
+                    min, decore com chocolate ou frutas.</p>
+            </div>
+        </div>
+
+        <div class="card" id="cookie">
+            <img src="https://i.pinimg.com/1200x/a2/54/ab/a254ab3176f62d952a39db1c7a2a6a2b.jpg" alt="Cookie">
+            <div class="card-content">
+                <h4>𝑪𝒐𝒐𝒌𝒊𝒆</h4>
+                <p>2 xícaras farinha, 1/2 xícara manteiga, 1 xícara açúcar, 1 ovo, gotas de chocolate. Misture, molde,
+                    asse 12-15 min a 180°C.</p>
+            </div>
+        </div>
+
+        <div class="card" id="pizza">
+            <img src="https://i.pinimg.com/1200x/d0/b8/95/d0b8951dd2a97ecc624778f280ffcb3b.jpg" alt="Pizza">
+            <div class="card-content">
+                <h4>𝑷𝒊𝒛𝒛𝒂</h4>
+                <p>Massa pronta ou caseira, molho de tomate, queijo, ingredientes a gosto. Monte, asse 15-20 min a
+                    200°C, sirva quentinha.</p>
+            </div>
+        </div>
+
+        <div class="card" id="salada">
+            <img src="https://i.pinimg.com/736x/14/aa/e2/14aae218aca430d8a3bb5bd2d45826c4.jpg" alt="Salada">
+            <div class="card-content">
+                <h4>𝑺𝒂𝒍𝒂𝒅𝒂</h4>
+                <p>Folhas verdes, tomates, pepino, cenoura ralada, azeite e limão. Misture e sirva como acompanhamento
+                    leve e saudável.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
